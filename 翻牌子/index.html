@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 翻牌模态框 -->
+    <div id="fpz_modal" class="hide">
+        <div class="modal_card"></div>
+    </div>
+    <!-- 奖品展示 -->
+    <div id="_W-l-r">
+        <div id="_W-l-r-bg"></div>
+        <div class="c">
+            <div class="h">
+                <div class="t">抽奖结果</div>
+                <a class="close">x</a>
+            </div>
+            <div class="ct">
+                <div class="_W-img"></div>
+                <h3>[[name = 中奖标题,allowblank = false]]</h3>
+                <h4>[[name = 中奖副标题,allowblank = false]]</h4>
+                <a class="_W-btn" target="_top" href=[URL]>确定</a>
+            </div>
+        </div>
+    </div>
+    <div id="fpz_container">
+        <div class="fpz_header">
+            <p>恭喜您获得<span>1</span>次抽奖机会！</p>
+        </div>
+        <div id="fpz_main">
+            <div class="fpz_cards"></div>
+            <div class="fpz_cards"></div>
+            <div class="fpz_cards"></div>
+            <div class="fpz_cards"></div>
+            <div class="fpz_cards"></div>
+            <div class="fpz_cards"></div>
+        </div>
+        <div class="fpz_footer">
+            <div class="award_text">奖品</div>
+            <div class="award_content">
+                <div id="wrapper">
+                    <div id="scroller">
+                        <ul id="award_ul" class="clearfix">
+                            <!-- 奖品展示容器 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/lib-flexible/lib-flexible.js"></script>
+<script src="./lib/iscroll/iscroll-lite.js"></script>
+<script src="./js/common.js"></script>
+<script>
+    var config = {
+        render_url: 'https://d1.wenjuan.link/a?z=wenjuan&c=60&lp=award_render', // 渲染banner数据地址
+        lottery_url: 'https://api.wenjuan.link/transfer/0.0.1/prize/get_banner', //抽奖请求地址
+        // lottery_url: 'http://192.168.10.136/dmptest/public/transfer/0.0.1/prize/get_banner?channel_id=4', // 测试地址
+        times: 3, //总抽奖次数
+        params: {} // post请求数据
+    }
+    config.params.channel_id = parseInt('[ASCID]') || 60;
+</script>
+<script src="./js/index.js"></script>
+
+</html>
