@@ -1,60 +1,46 @@
 @keyframes swing {
-    10% {
+    20% {
         left: 50%;
         transform: translateX(-50%);
     }
-    20% {
+    30% {
         left: 50%;
         -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, 15deg);
         transform: translateX(-50%) rotate3d(0, 0, 1, 15deg);
     }
-    25% {
+    40% {
         left: 50%;
         -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, -10deg);
         transform: translateX(-50%) rotate3d(0, 0, 1, -10deg);
     }
-    30% {
+    50% {
         left: 50%;
         -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, 5deg);
         transform: translateX(-50%) rotate3d(0, 0, 1, 5deg);
     }
-    35% {
+    60% {
         left: 50%;
         -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, -5deg);
         transform: translateX(-50%) rotate3d(0, 0, 1, -5deg);
     }
-    40% {
+    70% {
         left: 50%;
         -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, 0deg);
         transform: translateX(-50%) rotate3d(0, 0, 1, 0deg);
     }
-    45% {
-        left: 50%;
-        -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, 10deg);
-        transform: translateX(-50%) rotate3d(0, 0, 1, 10deg);
-    }
-    50% {
-        left: 50%;
-        -webkit-transform: translateX(-50%) rotate3d(0, 1, 0, 20deg);
-        transform: translateX(-50%) rotate3d(0, 1, 0, 20deg);
-    }
-    60% {
-        left: 50%;
-        -webkit-transform: translateX(-50%) rotate3d(0, 1, 0, 30deg);
-        transform: translateX(-50%) rotate3d(0, 1, 0, 30deg);
-    }
+
     to {
         left: 50%;
-        -webkit-transform: translateX(-50%) rotate3d(0, 1, 0, 40deg);
-        transform: translateX(-50%) rotate3d(0, 1, 0, 40deg);
+        -webkit-transform: translateX(-50%) rotate3d(0, 0, 1, 0deg);
+        transform: translateX(-50%) rotate3d(0, 0, 1, 0deg);
     }
 }
 
 .swing {
     -webkit-transform-origin: center center;
     transform-origin: center center;
-    -webkit-animation: swing 3s;
-    animation: swing 3s;
+    -webkit-animation: swing 2s;
+    animation: swing 2s;
 }
 
 .hide {

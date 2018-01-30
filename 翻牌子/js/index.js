@@ -124,7 +124,7 @@
                         top: top
                     });
                     methods.flag = index;
-                }, 200 * (index * 2 + 1))
+                }, 100 * (index * 2 + 1))
             })
             var i = 0;
             clearInterval(methods.light);
@@ -139,7 +139,7 @@
                         i = i < 5 ? i + 1 : 0;
                     }, 500)
                 }
-            }, 2400)
+            }, 1400)
         },
         hideCards: function () {
             clearInterval(methods.light);
@@ -260,7 +260,7 @@
             methods.hideCards();
             fpz_modal.classList.remove('hide');
             modal_card.classList.add('swing');
-            setTimeout(methods.lottery, 3000);
+            setTimeout(methods.lottery, 2000);
         }
     })
 }())
